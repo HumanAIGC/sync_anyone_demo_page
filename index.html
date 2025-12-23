@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="SyncAnyone">
+  <meta property="og:title" content="SyncAnyone" />
+  <meta property="og:description"
+    content="SyncAnyone: Implicit Disentanglement via Progressive Self-Correction for Lip-Syncing in the wild" />
+  <meta property="og:url" content="https://humanaigc.github.io/SyncAnyone/" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static2/images/motivation.png" />
+  <meta property="og:image:width" content="2412" />
+  <meta property="og:image:height" content="1394" />
+
+
+  <meta name="twitter:title" content="SyncAnyone">
+  <meta name="twitter:description"
+    content="SyncAnyone: Implicit Disentanglement via Progressive Self-Correction for Lip-Syncing in the wild">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static2/images/motivation.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Character Animation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Sync Anyone</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href=https://github.com/HumanAIGC>
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://humanaigc.github.io/animate-anyone/">
+              AnimateAnyone
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/OmniTalker/">
+              OmniTalker
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/TalkingBody/">
+              TalkingBody
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/emote-portrait-alive-2/">
+              EMO2
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/emote-portrait-alive/">
+              EMO
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/outfit-anyone/">
+              OutfitAnyone
+            </a>
+            <a class="navbar-item" href="https://tomguluson92.github.io/projects/cloth2tex/">
+              Cloth2Tex
+            </a>
+            <a class="navbar-item" href="https://humanaigc.github.io/vivid-talk/">
+              VividTalk
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- <div class="container is-max-desktop"> -->
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SyncAnyone: Implicit Disentanglement via Progressive Self-Correction for Lip-Syncing in the wild</h1>
+            <!-- Paper authors -->
+            <!-- <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&user=Arz3iGUAAAAJ&gmla=AJsN-F72u4R_vwVl2Jc0Sy_qIYuSwExx8ilpfrd-w5Yfi5FYFP_WhbJtHbAK_c5w-3KNBgTRjWiTvEFLtJSV5ryd1JuNVQdMVDMuSJS5dfn7NWbZQQpGGyyxlrfoq6cv6S_23QTSUWWY"
+                  target="_blank">Steven Xiao</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://humanaigc.github.io/animate-anyone-2/" target="_blank">Xindi
+                  Zhang</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=EY9GiDsAAAAJ&hl=en" target="_blank">Dechao
+                  Meng</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=cze1sXQAAAAJ&hl=en" target="_blank">Qi
+                  Wang</a>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=QTgxKmkAAAAJ&hl=zh-CN" target="_blank">Peng
+                  Zhang</a>,</span>
+              <span class="author-block">
+                <a href="https://dblp.org/pid/11/4046.html" target="_blank">Bang Zhang</a>,</span>
+            </div> -->
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">HumanAIGC group, Tongyi Lab，Alibaba Group</span>
+            </div>
+
+
+            <!-- ArXiv abstract Link -->
+            <span class="link-block">
+              <a href="https://arxiv.org/pdf/2502.06145" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-github"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="https://arxiv.org/pdf/2502.06145" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-github"></i>
+                </span>
+                <span>code</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- motivation -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="item">
+          <!-- Your image here -->
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="static_sync_anyone/method.png" alt="MY ALT TEXT" style="width: 100%;" />
+          </div>
+          <br class="content has-text-justified">
+            High-quality AI-powered video dubbing demands precise audio-lip synchronization, high-fidelity visual generation, and faithful preservation of identity and background. Most existing methods rely on a mask-based training strategy, where the mouth region is masked in talking-head videos, and the model learns to synthesize lip movements from corrupted inputs and target audios. While this facilitates lip-sync accuracy, it disrupts spatiotemporal context, impairing performance on dynamic facial motions and causing instability in facial structure and background consistency. To overcome this limitation, we propose  <strong>SyncAnyone</strong>, a novel two-stage learning framework that achieves accurate motion modeling and high visual fidelity simultaneously. In <strong>Stage 1</strong>, we train a diffusion-based video transformer for masked mouth inpainting, leveraging its strong spatiotemporal modeling to generate accurate, audio-driven lip movements. However, due to input corruption, minor artifacts may arise in the surrounding facial regions and the background. In <strong>Stage 2</strong>, we develop a mask-free tuning pipeline to address mask-induced artifacts. Specifically, on the basis of the Stage 1 model, we develop a data generation pipeline that creates pseudo-paired training samples by synthesizing lip-synced videos from the source video and random sampled audio. We further tune the stage 2 model on this synthetic data, achieving precise lip editing and better background consistency. Extensive experiments show that our method achieves state-of-the-art results in visual quality, temporal coherence, and identity preservation under in-the wild lip-syncing scenarios.
+          </h2>
+        </div>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <!-- <video poster="" id="video3" controls loop height="100%">\
+              <source src="static_sync_anyone/sync_anyone_webpage.mp4" type="video/mp4">
+            </video> -->
+            <iframe width="1031" height="580" src="https://www.youtube.com/embed/Fkv4ivCIkJs" title="Sync anyone: Implicit disentanglement via progressive self-correction for lip-syncing in the wild." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+
+  <!-- Video carousel -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Results</h2>
+
+        <h2 class="content has-text-justified">
+          Our video lip-sync model generates high-fidelity results across diverse styles and languages. Furthermore, it demonstrates superior robustness in challenging scenarios, such as handling occlusions, extreme head poses, and rapid motion.
+        </h2>
+
+        <h2 class="title is-4">Realistic Style</h2>
+
+        <div id="results-carousel33" class="carousel results-carousel">
+          <div class="item item-video3">
+            <video poster="" id="video5" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (31).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video1" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (32).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video1" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (33).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video2" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (34).mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+        <h2 class="title is-4">Cartoon Style</h2>
+
+        <div id="results-carousel33" class="carousel results-carousel">
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (19).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (18)-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (40).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (26)-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+        </div>
+
+        <h2 class="title is-4">Video Translate</h2>
+
+        <div id="results-carousel33" class="carousel results-carousel">
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (30).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (15)-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (41).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/media (16).mp4" type="video/mp4">
+            </video>
+          </div>
+
+          
+        </div>
+        
+        <h2 class="title is-4">Occlusion</h2>
+
+        <div id="results-carousel33" class="carousel results-carousel">
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/occlusion/butterfly_stage2.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/occlusion/media (38).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/occlusion/media (39).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" controls loop height="100%">\
+              <!-- Your video file here -->
+              <source src="static_sync_anyone/occlusion/media (37)-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+        </div>
+
+
+
+        <h2 class="title is-4">Comparison</h2>
+        <h2 class="content has-text-justified">
+          Compared to existing methods, our approach demonstrates superior performance across a variety of challenging scenarios. Specifically, it not only better handles dynamic challenges such as fast motion, extreme head poses, and occlusions, but also shows significant advantages in preserving facial identity and background consistency.
+        </h2>
+        <!-- <h2 class="content">Compare with LongLive</h2> -->
+        <div class="center-video">
+          <video poster="" id="video110" controls loop height="100%">\
+            <source src="static_sync_anyone/compare2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h2 class="content has-text-centered">In-the-wild scenarios</h2>
+        <div class="center-video">
+          <video poster="" id="video110" controls loop height="100%">\
+            <source src="static_sync_anyone/compare.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{zhang2025syncanyone,
+      title={SyncAnyone: Implicit Disentanglement via Progressive Self-Correction for Lip-Syncing in the wild},
+      author={Xindi Zhang and Dechao Meng and Steven Xiao and Qi Wang and Peng Zhang and Bang Zhang},
+      journal={arXiv preprint arXiv:2502.06145},
+      year={2025}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a> project page.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    bulmaCarousel.attach('#results-carousel11', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel22', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel33', {
+      slidesToScroll: 3,
+      slidesToShow: 3,
+      infinite: true,
+      autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel44', {
+      slidesToScroll: 4,
+      slidesToShow: 4,
+      infinite: true,
+      autoplay: false,
+    });
+  </script>
+
+  <!-- Default Statcounter code for aa2.0
+https://humanaigc.github.io/animate-anyone-2/ -->
+  <script type="text/javascript">
+    var sc_project = 13086045;
+    var sc_invisible = 1;
+    var sc_security = "edb02115"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/13086045/0/edb02115/1/" alt="Web Analytics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+  <!-- End of Statcounter Code -->
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
